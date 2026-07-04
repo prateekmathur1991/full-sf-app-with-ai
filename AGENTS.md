@@ -44,12 +44,12 @@ Integration best practices:
 - Prefer platform-native integration patterns such as Platform Events or Change Data Capture when they fit the use case.
 
 Testing and deployment:
-- Write or update tests for any Apex or automation change, with realistic data and both positive and negative paths.
-- Favor deterministic tests and avoid brittle assumptions.
+- Write or update tests for any Apex class created or modified.
+- Ensure that ALL the business logic in the apex class is covered by unit tests, instead of having tests that just provide test coverage.
+- Ensure that ALL valid business use cases covered in the code are convered by unit tests.
+- Each apex class should have minimum 85% of unit test code coverage.
 - Keep metadata deployable and aligned with Salesforce DX conventions under the force-app/main/default structure.
-- Validate that changes are maintainable, well-documented, and ready for deployment.
 
 Project-specific guidance:
 - Follow the existing repository structure and place new metadata in the correct force-app/main/default folder.
-- Keep changes scoped, minimal, and consistent with the patterns already present in this project.
 - When introducing a new feature, describe the intended architecture briefly before implementation and call out any risks, tradeoffs, or follow-up work.
