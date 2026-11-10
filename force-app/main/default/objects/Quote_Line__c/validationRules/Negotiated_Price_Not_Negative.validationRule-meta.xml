@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Negotiated_Price_Not_Negative</fullName>
+    <active>true</active>
+    <description
+  >Blocks a quote line with a negative unit negotiated price. There is no upper bound because markups are allowed.</description>
+    <errorConditionFormula>Negotiated_Price__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>Negotiated_Price__c</errorDisplayField>
+    <errorMessage>Unit negotiated price cannot be negative.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,45 @@
+<template>
+  <lightning-modal-header label={title}></lightning-modal-header>
+  <lightning-modal-body>
+    <lightning-record-edit-form
+      object-api-name="Quote__c"
+      record-id={recordId}
+      onsuccess={handleSuccess}
+      onerror={handleError}
+    >
+      <lightning-messages></lightning-messages>
+      <template lwc:if={errorMessage}>
+        <div
+          class="slds-text-color_error slds-m-bottom_small error-message"
+          role="alert"
+        >
+          {errorMessage}
+        </div>
+      </template>
+      <div class="slds-grid slds-wrap slds-gutters_x-small">
+        <template for:each={fields} for:item="field">
+          <div
+            key={field}
+            class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2"
+          >
+            <lightning-input-field field-name={field}></lightning-input-field>
+          </div>
+        </template>
+      </div>
+    </lightning-record-edit-form>
+  </lightning-modal-body>
+  <lightning-modal-footer>
+    <lightning-button
+      label={labels.CANCEL}
+      class="cancel-button"
+      onclick={handleCancel}
+    ></lightning-button>
+    <lightning-button
+      variant="brand"
+      label={labels.SAVE}
+      class="slds-m-left_x-small save-button"
+      disabled={isSaving}
+      onclick={handleSave}
+    ></lightning-button>
+  </lightning-modal-footer>
+</template>

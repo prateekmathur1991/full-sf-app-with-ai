@@ -1,0 +1,60 @@
+<template>
+    <lightning-card title={cardTitle} icon-name="standard:case">
+        <div class="slds-p-around_medium">
+            <lightning-input
+                type="text"
+                label={labelCaseTitle}
+                value={caseTitle}
+                onchange={handleTitleChange}
+                maxlength="255"
+                class="case-title-input"
+            ></lightning-input>
+
+            <lightning-textarea
+                label={labelCaseDescription}
+                value={caseDescription}
+                onchange={handleDescriptionChange}
+                class="slds-m-top_small case-description-input"
+            ></lightning-textarea>
+
+            <lightning-button
+                variant="brand"
+                label={labelSearchButton}
+                onclick={handleFindSimilarCases}
+                disabled={isSearchDisabled}
+                class="slds-m-top_medium find-similar-button"
+            ></lightning-button>
+
+            <template if:true={isLoading}>
+                <lightning-spinner
+                    alternative-text={labelLoading}
+                    size="small"
+                    class="slds-m-top_medium"
+                ></lightning-spinner>
+            </template>
+
+            <template if:true={hasSearched}>
+                <template if:true={hasResults}>
+                    <ul class="slds-m-top_medium similar-cases-list" role="list">
+                        <template for:each={similarCases} for:item="similarCase">
+                            <li key={similarCase.caseId} class="slds-box slds-m-bottom_x-small similar-case-item">
+                                <p>
+                                    <strong>{similarCase.caseNumber}</strong> - {similarCase.subject}
+                                </p>
+                                <p class="slds-text-body_small">
+                                    {labelStatus}: {similarCase.status} | {labelPriority}: {similarCase.priority}
+                                </p>
+                                <p class="slds-text-body_small slds-text-color_weak">
+                                    {similarCase.similarityReason}
+                                </p>
+                            </li>
+                        </template>
+                    </ul>
+                </template>
+                <template if:false={hasResults}>
+                    <p class="slds-m-top_medium no-results-message">{labelNoResults}</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

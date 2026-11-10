@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>CaseSimilarityFinder_CardTitle</fullName>
+        <categories>Case Similarity Finder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Similarity Finder card title</shortDescription>
+        <value>Find Similar Cases</value>
+    </labels>
+    <labels>
+        <fullName>CaseSimilarityFinder_CaseTitleLabel</fullName>
+        <categories>Case Similarity Finder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Similarity Finder case title field label</shortDescription>
+        <value>Case Title</value>
+    </labels>
+    <labels>
+        <fullName>CaseSimilarityFinder_CaseDescriptionLabel</fullName>
+        <categories>Case Similarity Finder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Similarity Finder case description field label</shortDescription>
+        <value>Case Description</value>
+    </labels>
+    <labels>
+        <fullName>CaseSimilarityFinder_SearchButtonLabel</fullName>
+        <categories>Case Similarity Finder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Similarity Finder search button label</shortDescription>
+        <value>Find Similar Cases</value>
+    </labels>
+    <labels>
+        <fullName>CaseSimilarityFinder_LoadingLabel</fullName>
+        <categories>Case Similarity Finder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Similarity Finder loading spinner alternative text</shortDescription>
+        <value>Searching for similar cases...</value>
+    </labels>
+    <labels>
+        <fullName>CaseSimilarityFinder_NoResultsMessage</fullName>
+        <categories>Case Similarity Finder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Similarity Finder no results message</shortDescription>
+        <value>No similar cases were found.</value>
+    </labels>
+    <labels>
+        <fullName>CaseSimilarityFinder_StatusLabel</fullName>
+        <categories>Case Similarity Finder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Similarity Finder result status label</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>CaseSimilarityFinder_PriorityLabel</fullName>
+        <categories>Case Similarity Finder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Similarity Finder result priority label</shortDescription>
+        <value>Priority</value>
+    </labels>
+    <labels>
+        <fullName>CaseSimilarityFinder_ErrorToastTitle</fullName>
+        <categories>Case Similarity Finder</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Similarity Finder error toast title</shortDescription>
+        <value>Error Finding Similar Cases</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_CardTitle</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager CardTitle</shortDescription>
+        <value>Quote Manager</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_QuoteSelectLabel</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager QuoteSelectLabel</shortDescription>
+        <value>Quote</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_QuoteSelectPlaceholder</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager QuoteSelectPlaceholder</shortDescription>
+        <value>Select a quote</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_NewQuote</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager NewQuote</shortDescription>
+        <value>New Quote</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_EditQuote</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager EditQuote</shortDescription>
+        <value>Edit Quote</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_DeleteQuote</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager DeleteQuote</shortDescription>
+        <value>Delete Quote</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_AddLine</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager AddLine</shortDescription>
+        <value>Add Line</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_NoQuotes</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager NoQuotes</shortDescription>
+        <value>No quotes yet. Create one to get started.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_NoQuoteSelected</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager NoQuoteSelected</shortDescription>
+        <value>Select a quote to view its lines.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_NoLines</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager NoLines</shortDescription>
+        <value>This quote has no lines yet.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_Loading</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager Loading</shortDescription>
+        <value>Loading</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_LinesTitle</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager LinesTitle</shortDescription>
+        <value>Quote Lines</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_SummaryTitle</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager SummaryTitle</shortDescription>
+        <value>Quote Summary</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_TotalListPrice</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager TotalListPrice</shortDescription>
+        <value>Total List Price</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_TotalNegotiatedPrice</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager TotalNegotiatedPrice</shortDescription>
+        <value>Total Negotiated Price</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_TotalDiscount</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager TotalDiscount</shortDescription>
+        <value>Total Discount</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_DiscountPercent</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager DiscountPercent</shortDescription>
+        <value>Discount %</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_LineCount</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager LineCount</shortDescription>
+        <value>Lines</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ColProduct</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ColProduct</shortDescription>
+        <value>Product</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ColQuantity</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ColQuantity</shortDescription>
+        <value>Quantity</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ColListPrice</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ColListPrice</shortDescription>
+        <value>Unit List Price</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ColNegotiatedPrice</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ColNegotiatedPrice</shortDescription>
+        <value>Unit Negotiated Price</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ColLineTotalList</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ColLineTotalList</shortDescription>
+        <value>Line List Total</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ColLineTotalNegotiated</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ColLineTotalNegotiated</shortDescription>
+        <value>Line Negotiated Total</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ColLineDiscount</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ColLineDiscount</shortDescription>
+        <value>Line Discount</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ActionEdit</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ActionEdit</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ActionDelete</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ActionDelete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_Save</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_Cancel</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ToastSuccessTitle</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ToastSuccessTitle</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ToastErrorTitle</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ToastErrorTitle</shortDescription>
+        <value>Error</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_LinesSaved</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager LinesSaved</shortDescription>
+        <value>Quote lines saved.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_LineDeleted</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager LineDeleted</shortDescription>
+        <value>Quote line deleted.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_QuoteDeleted</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager QuoteDeleted</shortDescription>
+        <value>Quote deleted.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_QuoteSaved</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager QuoteSaved</shortDescription>
+        <value>Quote saved.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ConfirmDeleteTitle</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ConfirmDeleteTitle</shortDescription>
+        <value>Confirm Delete</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ConfirmDeleteLine</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ConfirmDeleteLine</shortDescription>
+        <value>Delete this quote line? This cannot be undone.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ConfirmDeleteQuote</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ConfirmDeleteQuote</shortDescription>
+        <value>Delete this quote and all of its lines? This cannot be undone.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_UnknownError</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager UnknownError</shortDescription>
+        <value>An unexpected error occurred.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_LineModalNewTitle</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager LineModalNewTitle</shortDescription>
+        <value>Add Quote Line</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_LineModalEditTitle</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager LineModalEditTitle</shortDescription>
+        <value>Edit Quote Line</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_QuoteModalNewTitle</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager QuoteModalNewTitle</shortDescription>
+        <value>New Quote</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_QuoteModalEditTitle</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager QuoteModalEditTitle</shortDescription>
+        <value>Edit Quote</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ProductLabel</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ProductLabel</shortDescription>
+        <value>Product</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ProductPlaceholder</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ProductPlaceholder</shortDescription>
+        <value>Search active products</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_ProductRequired</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager ProductRequired</shortDescription>
+        <value>Select a product.</value>
+    </labels>
+    <labels>
+        <fullName>QuoteManager_DiscountPercentHelp</fullName>
+        <categories>Quote Manager</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote Manager DiscountPercentHelp</shortDescription>
+        <value>Discount % cannot be edited when the list price is 0.</value>
+    </labels>
+</CustomLabels>

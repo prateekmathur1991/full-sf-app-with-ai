@@ -1,0 +1,89 @@
+<template>
+  <lightning-card title={labels.CARD_TITLE} icon-name="standard:quotes">
+    <div slot="actions">
+      <lightning-button
+        label={labels.NEW_QUOTE}
+        icon-name="utility:add"
+        class="new-quote"
+        onclick={handleNewQuote}
+      ></lightning-button>
+    </div>
+    <div class="slds-card__body_inner slds-is-relative">
+      <template lwc:if={isLoading}>
+        <lightning-spinner
+          alternative-text={labels.LOADING}
+          size="small"
+        ></lightning-spinner>
+      </template>
+      <template lwc:if={loadError}>
+        <div
+          class="slds-text-color_error slds-m-bottom_small load-error"
+          role="alert"
+        >
+          {loadError}
+        </div>
+      </template>
+      <template lwc:if={hasQuotes}>
+        <div
+          class="slds-grid slds-wrap slds-grid_vertical-align-end slds-gutters_x-small slds-m-bottom_small"
+        >
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+            <lightning-combobox
+              label={labels.QUOTE_SELECT_LABEL}
+              placeholder={labels.QUOTE_SELECT_PLACEHOLDER}
+              options={quoteOptions}
+              value={selectedQuoteId}
+              class="quote-picker"
+              onchange={handleQuoteChange}
+            ></lightning-combobox>
+          </div>
+          <template lwc:if={hasSelection}>
+            <div class="slds-col">
+              <lightning-button-group>
+                <lightning-button
+                  label={labels.EDIT_QUOTE}
+                  class="edit-quote"
+                  onclick={handleEditQuote}
+                ></lightning-button>
+                <lightning-button
+                  label={labels.DELETE_QUOTE}
+                  variant="destructive-text"
+                  class="delete-quote"
+                  onclick={handleDeleteQuote}
+                ></lightning-button>
+                <lightning-button
+                  label={labels.ADD_LINE}
+                  icon-name="utility:add"
+                  class="add-line"
+                  onclick={handleAddLine}
+                ></lightning-button>
+              </lightning-button-group>
+            </div>
+          </template>
+        </div>
+        <template lwc:if={hasSelection}>
+          <c-quote-summary totals={totals}></c-quote-summary>
+          <h3 class="slds-text-heading_small slds-m-bottom_x-small">
+            {labels.LINES_TITLE}
+          </h3>
+          <c-quote-line-table
+            lines={lines}
+            ondraftschange={handleDraftsChange}
+            onsave={handleDraftsSave}
+            oncancel={handleDraftsCancel}
+            onrowedit={handleRowEdit}
+            onrowdelete={handleRowDelete}
+          ></c-quote-line-table>
+        </template>
+        <template lwc:if={noSelection}>
+          <p class="slds-text-color_weak no-selection">
+            {labels.NO_QUOTE_SELECTED}
+          </p>
+        </template>
+      </template>
+      <template lwc:else>
+        <p class="slds-text-color_weak no-quotes">{labels.NO_QUOTES}</p>
+      </template>
+    </div>
+  </lightning-card>
+</template>

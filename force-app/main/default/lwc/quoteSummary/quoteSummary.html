@@ -1,0 +1,50 @@
+<template>
+  <section
+    class="slds-box slds-box_x-small slds-m-bottom_small"
+    aria-label={labels.SUMMARY_TITLE}
+  >
+    <h2 class="slds-text-heading_small slds-m-bottom_x-small">
+      {labels.SUMMARY_TITLE}
+    </h2>
+    <dl class="slds-grid slds-wrap slds-gutters_x-small">
+      <template for:each={tiles} for:item="tile">
+        <div
+          key={tile.key}
+          class="slds-col slds-size_1-of-2 slds-medium-size_1-of-5"
+          data-id={tile.key}
+        >
+          <dt class="slds-text-title">{tile.label}</dt>
+          <dd class="slds-text-heading_medium">
+            <template lwc:if={tile.isCurrency}>
+              <lightning-formatted-number
+                value={tile.value}
+                format-style="currency"
+                minimum-fraction-digits="2"
+                maximum-fraction-digits="2"
+              ></lightning-formatted-number>
+            </template>
+            <template lwc:else>
+              <lightning-formatted-number
+                value={tile.value}
+                format-style="percent"
+                minimum-fraction-digits="2"
+                maximum-fraction-digits="2"
+              ></lightning-formatted-number>
+            </template>
+          </dd>
+        </div>
+      </template>
+      <div
+        class="slds-col slds-size_1-of-2 slds-medium-size_1-of-5"
+        data-id="count"
+      >
+        <dt class="slds-text-title">{labels.LINE_COUNT}</dt>
+        <dd class="slds-text-heading_medium">
+          <lightning-formatted-number
+            value={lineCount}
+          ></lightning-formatted-number>
+        </dd>
+      </div>
+    </dl>
+  </section>
+</template>

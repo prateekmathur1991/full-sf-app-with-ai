@@ -1,0 +1,90 @@
+<template>
+    <div class="account-map-container">
+        <div class="search-container">
+            <lightning-card title={title}>
+                <div class="search-input-wrapper">
+                    <lightning-input
+                        label="Enter Address"
+                        placeholder="e.g., San Francisco, CA"
+                        value={searchAddress}
+                        onchange={handleAddressChange}
+                        onkeyup={handleSearchKeyup}
+                        disabled={isSearching}
+                    ></lightning-input>
+                    <button
+                        class="search-button"
+                        onclick={handleSearch}
+                        disabled={isSearchButtonDisabled}
+                    >
+                        {searchButtonLabel}
+                    </button>
+                </div>
+
+                <template if:false={resultMessage}>
+                    <div class="info-text">
+                        Enter an address to find accounts within 50 miles
+                    </div>
+                </template>
+
+                <template if:true={resultMessage}>
+                    <div class={resultMessageClass}>
+                        {resultMessage}
+                    </div>
+                </template>
+
+                <template if:true={showResults}>
+                    <div class="results-summary">
+                        Found {accountCount} account{accountCountPlural}
+                    </div>
+                </template>
+            </lightning-card>
+        </div>
+
+        <template if:true={showMap}>
+            <div class="map-container">
+                <lightning-map
+                    map-markers={mapMarkers}
+                    zoom-level={zoomLevel}
+                ></lightning-map>
+            </div>
+        </template>
+
+        <template if:true={showResults}>
+            <div class="accounts-list-container">
+                <lightning-card title="Account Details">
+                    <template if:false={accounts}>
+                        <div class="no-results">No accounts found in this area</div>
+                    </template>
+
+                    <template if:true={accounts}>
+                        <div class="accounts-list">
+                            <template for:each={accounts} for:item="account">
+                                <div key={account.Id} class="account-card">
+                                    <div class="account-name">{account.Name}</div>
+                                    <div class="account-detail">
+                                        <span class="label">Phone:</span>
+                                        <span class="value">{account.Phone}</span>
+                                    </div>
+                                    <div class="account-detail">
+                                        <span class="label">Revenue:</span>
+                                        <span class="value">{account.AnnualRevenue}</span>
+                                    </div>
+                                    <div class="account-detail">
+                                        <span class="label">Address:</span>
+                                        <span class="value">{account.BillingStreet} {account.BillingCity}, {account.BillingState}</span>
+                                    </div>
+                                    <div class="coordinates">
+                                        <span class="label">Coordinates:</span>
+                                        <span class="value">
+                                            {account.ShippingLatitude}, {account.ShippingLongitude}
+                                        </span>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                </lightning-card>
+            </div>
+        </template>
+    </div>
+</template>

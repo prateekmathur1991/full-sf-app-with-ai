@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" label="Case Similarity Agent">
+    <protected>false</protected>
+    <values>
+        <field>Agent_Id__c</field>
+        <value xsi:type="xsd:string">REPLACE_WITH_AGENT_ID</value>
+    </values>
+    <values>
+        <field>Named_Credential_Name__c</field>
+        <value xsi:type="xsd:string">Agentforce_Agent_API</value>
+    </values>
+</CustomMetadata>

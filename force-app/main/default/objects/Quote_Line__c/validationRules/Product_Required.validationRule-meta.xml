@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Required</fullName>
+    <active>true</active>
+    <description>Requires a product on every quote line. Used instead of a required field because Product2 lookups cannot use the Restrict delete option.</description>
+    <errorConditionFormula>ISBLANK(Product__c)</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Select a product for this quote line.</errorMessage>
+</ValidationRule>

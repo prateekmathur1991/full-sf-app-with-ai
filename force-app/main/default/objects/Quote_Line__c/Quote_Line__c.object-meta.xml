@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description
+  >A product line on a custom Quote. Stores quantity, unit list price and unit negotiated price; line totals, discount and discount percent are formulas. Validation rules require a positive quantity and non-negative prices. Markups (negotiated above list) are allowed.</description>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <label>Quote Line</label>
+    <nameField>
+        <displayFormat>QL-{00000}</displayFormat>
+        <label>Quote Line Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Quote Lines</pluralLabel>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

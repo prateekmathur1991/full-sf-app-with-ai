@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>AccountMapController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>Permission set for users to access the Account Map Lightning Web Component and search accounts by distance</description>
+    <fieldPermissions>
+        <field>Account.AnnualRevenue</field>
+        <readable>true</readable>
+        <editable>false</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Account.BillingAddress</field>
+        <readable>true</readable>
+        <editable>false</editable>
+    </fieldPermissions>
+    <!-- <fieldPermissions>
+        <field>Account.BillingCity</field>
+        <readable>true</readable>
+        <editable>false</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Account.BillingCountry</field>
+        <readable>true</readable>
+        <editable>false</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Account.BillingPostalCode</field>
+        <readable>true</readable>
+        <editable>false</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Account.BillingState</field>
+        <readable>true</readable>
+        <editable>false</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Account.BillingStreet</field>
+        <readable>true</readable>
+        <editable>false</editable>
+    </fieldPermissions> -->
+    <fieldPermissions>
+        <field>Account.Name</field>
+        <readable>true</readable>
+        <editable>false</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Account.Phone</field>
+        <readable>true</readable>
+        <editable>false</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Account.ShippingLatitude</field>
+        <readable>true</readable>
+        <editable>false</editable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <field>Account.ShippingLongitude</field>
+        <readable>true</readable>
+        <editable>false</editable>
+    </fieldPermissions>
+    <label>Account Map User</label>
+    <objectPermissions>
+        <object>Account</object>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+</PermissionSet>

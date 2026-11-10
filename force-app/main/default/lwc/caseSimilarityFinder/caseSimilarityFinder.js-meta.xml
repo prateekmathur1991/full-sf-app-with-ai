@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <description>Lets a user type a case title and description and calls an Apex controller that invokes an Agentforce agent (via the Agent API) to find similar existing cases.</description>
+    <isExposed>true</isExposed>
+    <masterLabel>Case Similarity Finder</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage">
+            <property name="cardTitle" type="String" label="Card Title" default="Find Similar Cases" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

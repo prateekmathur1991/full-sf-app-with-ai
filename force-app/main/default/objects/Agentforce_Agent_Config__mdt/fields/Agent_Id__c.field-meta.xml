@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agent_Id__c</fullName>
+    <description>The Agentforce Agent ID (BotDefinition Id) that the Case Similarity Finder should call. See README-TASK.md for how to obtain this value.</description>
+    <label>Agent Id</label>
+    <length>18</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

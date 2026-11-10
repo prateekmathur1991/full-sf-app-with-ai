@@ -1,0 +1,98 @@
+<template>
+  <lightning-modal-header label={title}></lightning-modal-header>
+  <lightning-modal-body>
+    <lightning-record-picker
+      label={labels.PRODUCT_LABEL}
+      placeholder={labels.PRODUCT_PLACEHOLDER}
+      object-api-name="Product2"
+      filter={productFilter}
+      value={draft.productId}
+      required
+      onchange={handleProductChange}
+    ></lightning-record-picker>
+    <template lwc:if={productError}>
+      <div
+        class="slds-form-element__help slds-text-color_error product-error"
+        role="alert"
+      >
+        {productError}
+      </div>
+    </template>
+    <div class="slds-grid slds-wrap slds-gutters_x-small slds-m-top_small">
+      <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+        <lightning-input
+          type="number"
+          label={labels.QUANTITY}
+          data-field="quantity"
+          value={draft.quantity}
+          min="0.01"
+          step="0.01"
+          required
+          onchange={handleFieldChange}
+        ></lightning-input>
+      </div>
+      <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+        <lightning-input
+          type="number"
+          formatter="currency"
+          label={labels.LIST_PRICE}
+          data-field="listPrice"
+          value={draft.listPrice}
+          min="0"
+          step="0.01"
+          required
+          onchange={handleFieldChange}
+        ></lightning-input>
+      </div>
+      <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+        <lightning-input
+          type="number"
+          formatter="currency"
+          label={labels.NEGOTIATED_PRICE}
+          data-field="negotiatedPrice"
+          value={draft.negotiatedPrice}
+          min="0"
+          step="0.01"
+          required
+          onchange={handleFieldChange}
+        ></lightning-input>
+      </div>
+      <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+        <lightning-input
+          type="number"
+          formatter="currency"
+          label={labels.LINE_DISCOUNT}
+          data-field="totalDiscount"
+          value={draft.totalDiscount}
+          step="0.01"
+          onchange={handleFieldChange}
+        ></lightning-input>
+      </div>
+      <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+        <lightning-input
+          type="number"
+          label={labels.DISCOUNT_PERCENT}
+          data-field="discountPercent"
+          value={draft.discountPercent}
+          step="0.01"
+          disabled={percentDisabled}
+          field-level-help={percentHelp}
+          onchange={handleFieldChange}
+        ></lightning-input>
+      </div>
+    </div>
+  </lightning-modal-body>
+  <lightning-modal-footer>
+    <lightning-button
+      label={labels.CANCEL}
+      class="cancel-button"
+      onclick={handleCancel}
+    ></lightning-button>
+    <lightning-button
+      variant="brand"
+      label={labels.SAVE}
+      class="slds-m-left_x-small save-button"
+      onclick={handleSave}
+    ></lightning-button>
+  </lightning-modal-footer>
+</template>

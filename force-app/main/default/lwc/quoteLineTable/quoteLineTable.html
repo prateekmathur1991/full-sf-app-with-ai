@@ -1,0 +1,21 @@
+<template>
+  <template lwc:if={hasLines}>
+    <lightning-datatable
+      key-field="id"
+      data={rows}
+      columns={columns}
+      draft-values={draftValues}
+      hide-checkbox-column
+      aria-label={labels.LINES_TITLE}
+      oncellchange={handleCellChange}
+      onsave={handleSave}
+      oncancel={handleCancel}
+      onrowaction={handleRowAction}
+    ></lightning-datatable>
+  </template>
+  <template lwc:else>
+    <p class="slds-p-around_medium slds-text-color_weak empty-lines">
+      {labels.NO_LINES}
+    </p>
+  </template>
+</template>
