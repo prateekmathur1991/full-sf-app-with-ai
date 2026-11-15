@@ -41,22 +41,7 @@
         <editable>false</editable>
     </fieldPermissions> -->
     <fieldPermissions>
-        <field>Account.Name</field>
-        <readable>true</readable>
-        <editable>false</editable>
-    </fieldPermissions>
-    <fieldPermissions>
         <field>Account.Phone</field>
-        <readable>true</readable>
-        <editable>false</editable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <field>Account.ShippingLatitude</field>
-        <readable>true</readable>
-        <editable>false</editable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <field>Account.ShippingLongitude</field>
         <readable>true</readable>
         <editable>false</editable>
     </fieldPermissions>

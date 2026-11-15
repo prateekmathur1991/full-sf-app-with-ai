@@ -89,6 +89,13 @@ public with sharing class LargeDataTableController {
             // Calculate offset
             Integer offset = (pageNumber - 1) * RECORDS_PER_PAGE;
 
+            // Out-of-range page: return an empty page instead of issuing a query whose
+            // OFFSET would exceed the record count (and SOQL's 2,000 OFFSET cap)
+            if (offset >= totalRecords) {
+                result.records = new List<Map<String, Object>>();
+                return result;
+            }
+
             // Build query
             String query = buildQuery(objectName, fields, null, offset);
 

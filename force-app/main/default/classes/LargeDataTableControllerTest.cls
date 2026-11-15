@@ -42,12 +42,12 @@ private class LargeDataTableControllerTest {
 
         // Verify pagination metadata
         Assert.isNotNull(result, 'Result should not be null');
-        Assert.equals(1, result.pageNumber, 'Page number should be 1');
-        Assert.equals(1050, result.totalRecords, 'Total records should be 1050');
-        Assert.equals(3, result.totalPages, 'Total pages should be 3 (1050/500)');
+        Assert.areEqual(1, result.pageNumber, 'Page number should be 1');
+        Assert.areEqual(1050, result.totalRecords, 'Total records should be 1050');
+        Assert.areEqual(3, result.totalPages, 'Total pages should be 3 (1050/500)');
         Assert.isTrue(result.hasNextPage, 'Should have next page');
         Assert.isFalse(result.hasPreviousPage, 'Should not have previous page');
-        Assert.equals(500, result.records.size(), 'First page should have 500 records');
+        Assert.areEqual(500, result.records.size(), 'First page should have 500 records');
     }
 
     /**
@@ -66,10 +66,10 @@ private class LargeDataTableControllerTest {
         
         Test.stopTest();
 
-        Assert.equals(2, result.pageNumber, 'Page number should be 2');
+        Assert.areEqual(2, result.pageNumber, 'Page number should be 2');
         Assert.isTrue(result.hasNextPage, 'Should have next page');
         Assert.isTrue(result.hasPreviousPage, 'Should have previous page');
-        Assert.equals(500, result.records.size(), 'Second page should have 500 records');
+        Assert.areEqual(500, result.records.size(), 'Second page should have 500 records');
     }
 
     /**
@@ -88,10 +88,10 @@ private class LargeDataTableControllerTest {
         
         Test.stopTest();
 
-        Assert.equals(3, result.pageNumber, 'Page number should be 3');
+        Assert.areEqual(3, result.pageNumber, 'Page number should be 3');
         Assert.isFalse(result.hasNextPage, 'Should not have next page');
         Assert.isTrue(result.hasPreviousPage, 'Should have previous page');
-        Assert.equals(50, result.records.size(), 'Third page should have 50 records');
+        Assert.areEqual(50, result.records.size(), 'Third page should have 50 records');
     }
 
     /**
@@ -110,7 +110,7 @@ private class LargeDataTableControllerTest {
         
         Test.stopTest();
 
-        Assert.equals(1, result.pageNumber, 'Should default to page 1');
+        Assert.areEqual(1, result.pageNumber, 'Should default to page 1');
     }
 
     /**
@@ -129,7 +129,7 @@ private class LargeDataTableControllerTest {
         
         Test.stopTest();
 
-        Assert.equals(1, result.pageNumber, 'Should default to page 1');
+        Assert.areEqual(1, result.pageNumber, 'Should default to page 1');
     }
 
     /**
@@ -149,7 +149,7 @@ private class LargeDataTableControllerTest {
         Test.stopTest();
 
         Assert.isNotNull(result, 'Result should not be null');
-        Assert.equals(1, result.pageNumber, 'Page number should be 1');
+        Assert.areEqual(1, result.pageNumber, 'Page number should be 1');
     }
 
     /**
@@ -260,7 +260,7 @@ private class LargeDataTableControllerTest {
         Test.startTest();
         
         LargeDataTableController.SearchCriteria criteria = new LargeDataTableController.SearchCriteria();
-        criteria.searchTerm = "Test' OR '1'='1";
+        criteria.searchTerm = 'Test\' OR \'1\'=\'1';
         
         LargeDataTableController.PaginatedResult result = 
             LargeDataTableController.searchRecords(
@@ -301,8 +301,8 @@ private class LargeDataTableControllerTest {
         
         Test.stopTest();
 
-        Assert.equals(result1.totalRecords, result2.totalRecords, 'Both calls should return same data');
-        Assert.equals(result1.records.size(), result2.records.size(), 'Both calls should return same records count');
+        Assert.areEqual(result1.totalRecords, result2.totalRecords, 'Both calls should return same data');
+        Assert.areEqual(result1.records.size(), result2.records.size(), 'Both calls should return same records count');
     }
 
     /**
@@ -372,7 +372,7 @@ private class LargeDataTableControllerTest {
 
         // 1050 records / 500 per page = 3 pages (rounding up)
         Integer expectedPages = (Integer)Math.ceil(1050.0 / 500);
-        Assert.equals(expectedPages, result.totalPages, 'Total pages calculation should be correct');
+        Assert.areEqual(expectedPages, result.totalPages, 'Total pages calculation should be correct');
     }
 
     /**
@@ -419,7 +419,7 @@ private class LargeDataTableControllerTest {
         Test.stopTest();
 
         Assert.isNotNull(result, 'Result should not be null');
-        Assert.equals(1050, result.totalRecords, 'Should return all records when criteria is null');
+        Assert.areEqual(1050, result.totalRecords, 'Should return all records when criteria is null');
     }
 
     /**
@@ -443,7 +443,7 @@ private class LargeDataTableControllerTest {
         Test.stopTest();
 
         Assert.isNotNull(result, 'Result should not be null');
-        Assert.equals(1050, result.totalRecords, 'Should return all records with empty search term');
+        Assert.areEqual(1050, result.totalRecords, 'Should return all records with empty search term');
     }
 
     /**
@@ -462,9 +462,9 @@ private class LargeDataTableControllerTest {
         
         Test.stopTest();
 
-        Assert.equals(999, result.pageNumber, 'Page number should be 999');
+        Assert.areEqual(999, result.pageNumber, 'Page number should be 999');
         Assert.isFalse(result.hasNextPage, 'Should not have next page');
-        Assert.equals(0, result.records.size(), 'Should return 0 records for out-of-range page');
+        Assert.areEqual(0, result.records.size(), 'Should return 0 records for out-of-range page');
     }
 
     /**

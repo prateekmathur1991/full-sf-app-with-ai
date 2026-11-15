@@ -10,3 +10,13 @@ package.xml
 
 # LWC Jest
 **/__tests__/**
+
+# Case Similarity / Agentforce feature — excluded until Agent ID, My Domain and
+# External Credential config are finalized (placeholders still present)
+**/classes/CaseSimilarity*
+**/lwc/caseSimilarityFinder
+**/objects/Agentforce_Agent_Config__mdt
+**/customMetadata/Agentforce_Agent_Config.*
+**/externalCredentials/Agentforce_Agent_API.*
+**/namedCredentials/Agentforce_Agent_API.*
+**/permissionsets/Case_Similarity_Finder_User.*
