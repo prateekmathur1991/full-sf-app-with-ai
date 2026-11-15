@@ -96,24 +96,21 @@ public inherited sharing class Account_Selector {
         Decimal distanceMiles,
         Integer limitRecords
     ) {
+        // SOQL does not support aliasing DISTANCE() in SELECT or referencing an alias in ORDER BY,
+        // so the expression is repeated in WHERE and ORDER BY.
+        String distanceExpr =
+            'DISTANCE(ShippingAddress, GEOLOCATION(' +
+            latitude +
+            ',' +
+            longitude +
+            '), \'mi\')';
         String query =
             'SELECT ' +
             getFieldsCSV() +
-            ', DISTANCE(ShippingAddress, GEOLOCATION(' +
-            latitude +
-            ',' +
-            longitude +
-            '), \'mi\') dist ' +
-            'FROM Account ' +
-            'WHERE DISTANCE(ShippingAddress, GEOLOCATION(' +
-            latitude +
-            ',' +
-            longitude +
-            '), \'mi\') < ' +
-            distanceMiles +
-            ' ORDER BY dist ASC ' +
-            'LIMIT ' +
-            limitRecords;
+            ' FROM Account' +
+            ' WHERE ' + distanceExpr + ' < ' + distanceMiles +
+            ' ORDER BY ' + distanceExpr + ' ASC' +
+            ' LIMIT ' + limitRecords;
 
         return Database.query(query);
     }
